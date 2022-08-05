@@ -15,7 +15,7 @@ weatherFrom.addEventListener('submit', (e) => {
     messageTwo.textContent = ''
 
     
-    fetch('http://localhost:3000/weather?address='+location).then((response) =>{
+    fetch('/weather?address='+location).then((response) =>{ // se deja un simple / para indicar que pueda ser desde local Host o desde Horoku
     response.json().then((data)=>{
         if (data.error){
             messageOne.textContent = data.error
